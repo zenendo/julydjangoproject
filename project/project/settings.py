@@ -25,7 +25,7 @@ SECRET_KEY = 'e6why9qjy2o26n-8_&qh+*q^q%wt%mo-ruuz9pnjqn@7)j)rg1'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
 
 
 # Application definition
@@ -119,3 +119,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/var/www/venv/julydjangoproject/project/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, '/var/www/venv/julydjangoproject/project/staticfiles/')
+]
+MEDIA_URL = '/media/'
+MEDIA_ROOT = os.path.join(BASE_DIR, '/var/www/venv/julydjangoproject/project/media/')
